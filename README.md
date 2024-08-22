@@ -1,6 +1,19 @@
-# Anugular task
+# Angular task
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (includes npm) - Ensure you have Node.js installed. You can verify the installation by running the following commands:
+  ```bash
+  node -v
+  npm -v
+
+## Unzip the project and to run on VSCode implement the following command 
+`npm install`
+`npm install -g @angular/cli`
+`ng serve`
+
 
 ## Development server
 
