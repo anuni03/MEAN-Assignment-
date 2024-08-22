@@ -1,0 +1,26 @@
+<main class="main">
+  <div class="form">
+    <input name="name" [(ngModel)]="user.Name" placeholder="Name" /><br />
+    <input name="age" [(ngModel)]="user.Age" placeholder="Age" /><br />
+    <input name="gender" [(ngModel)]="user.Gender" placeholder="Gender" /><br />
+    <input name="phone" [(ngModel)]="user.Mobile_number" placeholder="Phone" /><br />
+    <button (click)="getValues()">
+      {{ editingUserId ? 'Update User' : 'Add User' }}
+    </button>
+    <button (click)="resetForm()" *ngIf="editingUserId">Cancel</button>
+  </div>
+  <div>
+    <h2>All Users</h2>
+    <ul *ngIf="allUsers.length">
+      <li *ngFor="let usr of allUsers">
+        <p><strong>Name:</strong> {{ usr.Name }}</p>
+        <p><strong>Age:</strong> {{ usr.Age }}</p>
+        <p><strong>Gender:</strong> {{ usr.Gender }}</p>
+        <p><strong>Mobile Number:</strong> {{ usr.Mobile_number }}</p>
+        <button (click)="editUser(usr)">Edit</button>
+        <button (click)="deleteUser(usr._id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</main>
+<router-outlet></router-outlet>
